@@ -19,21 +19,29 @@
 
 ## 🏃‍♂️ Running
 
-#### With Docker
+#### Setup
+
+1. Setup a postgres database url in `.env` file `DATABASE_URL`, exemple:
 
 ```bash
-  $ docker build -t currency-converter-api .
-  $ docker run -p 3333:3333 -d currency-converter-api
+DATABASE_URL="postgresql://<DATABASE_USER>:<DATABASE_PASS>@localhost:5432/currency_converter_db"
 ```
 
-#### Without Docker
+**OBS: If you don't have Postgres in your machine but have docker compose, just run `docker-compose up` to instantiate a postgres image**
+
+2. Run Prisma migrations and Prisma Client setup
 
 ```bash
-  # Create a .env file with 
+npm run prisma:migrate
+npm run prisma:generate
+```
 
-  $ npm install
-  $ npm run start
-``` 
+3. Run the project
+
+```bash
+npm run start
+```
+
 
 <br>
 
