@@ -24,7 +24,7 @@ function validateRequiredFieldsExistence(request: Request) {
     const requiredFields = ["from", "to", "amount"]
 
     for (const field of requiredFields) {
-        if (request.body.hasOwnProperty(field)) continue
+        if (request.body[field]) continue
         throw new IllegalArgumentException(`Missing required field: ${field}`)    
     }
 }
