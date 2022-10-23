@@ -70,7 +70,7 @@ npm run start
 
 <br>
 
-## Folder structure
+## 📦 Folder structure
 
 ```
 📦 currency-converter
@@ -99,6 +99,12 @@ npm run start
  ┣ 📜 tsconfig.json
 
 ```
+
+<br>
+
+## 🎯 Tools Motivation
+
+Thinking about a simple project, easy to test and with high capacity to improvements, the API was built using the clean architecture principles. It came up with pros and cons, like tools limitation that could work togheter respecting these principles. Prisma and axios are one of those! Prisma combined the ability to work with repositories without dirt things in our entities and low accoplament, for example. Axios, on the other hand, provided a way to handle with http client to handle with requests.
 
 <br>
 
