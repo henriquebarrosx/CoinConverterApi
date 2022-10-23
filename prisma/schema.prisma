@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider      = "prisma-client-js"
+    binaryTargets = ["native", "linux-arm64-openssl-1.1.x"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Transaction {
+    id            String   @id @unique @default(uuid())
+    userId        String   @default(uuid())
+    from          String
+    amount        Decimal
+    to            String
+    conversionTax Decimal
+    createdAt     DateTime @default(now())
+
+    @@map("transactions")
+}
