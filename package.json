@@ -5,7 +5,8 @@
   "description": "A currency converter API",
   "author": "Henrique Barros <henriquebarrosx@gmail.com>",
   "scripts": {
-    "start": "npm run prisma:migrate && npm run prisma:generate && ts-node -r tsconfig-paths/register ./src/index.ts",
+    "start:watch": "nodemon -r tsconfig-paths/register ./src/index.ts",
+    "start": "ts-node -r tsconfig-paths/register ./src/index.ts",
     "prisma:migrate": "prisma migrate dev --name init",
     "prisma:generate": "prisma generate"
   },
@@ -22,6 +23,7 @@
     "@prisma/client": "^4.5.0",
     "axios": "^1.1.3",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
   }
 }
