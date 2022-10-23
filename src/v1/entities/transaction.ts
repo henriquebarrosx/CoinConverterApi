@@ -21,8 +21,16 @@ export class Transaction {
         return this.transaction.id
     }
 
+    setId(value: string): void {
+        this.transaction.id = value
+    }
+
     getUserId(): string {
         return this.transaction.userId
+    }
+
+    setUserId(value: string): void {
+        this.transaction.userId = value
     }
 
     getCurrencyBase(): Currency {
@@ -43,6 +51,10 @@ export class Transaction {
 
     getUtcDatetime(): string {
         return this.transaction.createdAt
+    }
+
+    setUtcDatetime(value: string): void {
+        this.transaction.createdAt = value
     }
 
     toJSON() {
