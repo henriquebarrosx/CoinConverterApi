@@ -74,20 +74,26 @@ npm run start
 
 ```
 📦 currency-converter
- ┣ 📂src
- ┃ ┣ 📂 utils
+ ┣ 📂 prisma
+ ┣ 📂 src
+ ┃ ┣ 📂 common-types
+ ┃ ┣ 📂 exception
+ ┃ ┣ 📂 providers
+ ┃ ┃ ┃ ┣ 📂 database
+ ┃ ┃ ┃ ┣ 📂 http-client
  ┃ ┣ 📂 v1
  ┃ ┃ ┣ 📂 entities
- ┃ ┃ ┣ 📂 exceptions
  ┃ ┃ ┣ 📂 middlewares
- ┃ ┃ ┣ 📂 providers
- ┃ ┃ ┃ ┣ 📂 http-client
  ┃ ┃ ┣ 📂 repositories
  ┃ ┃ ┣ 📂 use-cases
  ┃ ┃ ┃ ┣ 📂 create-transaction
  ┃ ┃ ┃ ┣ 📂 list-transaction
+ ┃ ┣ 📜 routes
+ ┃ ┣ 📜 index.ts
  ┣ 📜 .gitignore
+ ┣ 📜 docker-compose.yml
  ┣ 📜 README.md
+ ┣ 📜 LICENSE
  ┣ 📜 package-lock.json
  ┣ 📜 package.json
  ┣ 📜 tsconfig.json
