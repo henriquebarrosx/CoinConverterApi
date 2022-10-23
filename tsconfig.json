@@ -16,6 +16,9 @@
       "baseUrl": ".",
       "paths": {
         "@common-types/*": [ "src/common-types/*" ],
+        "@providers/*": [ "src/providers/*" ],
+        "@entities/*": [ "src/v1/entities/*" ],
+        "@repositories/*": [ "src/v1/repositories/*" ],
       }
     }
   }
