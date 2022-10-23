@@ -1,4 +1,5 @@
 import { Request, Response } from "express"
+import { exceptionHandler } from "@exceptions/exception-handler"
 import { CreateTransactionUseCase } from "./CreateTransactionUseCase"
 
 
@@ -13,9 +14,7 @@ export class CreateTransactionController {
         }
 
         catch (error: unknown) {
-            return response.status(500).json({
-                message: "Unexpected error"
-            })
+            return exceptionHandler(error, response)
         }
     }
 }

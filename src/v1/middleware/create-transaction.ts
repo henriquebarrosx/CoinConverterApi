@@ -7,6 +7,7 @@ export function validateRequiredFields(req: Request, res: Response, next: NextFu
     try {
         const { from, to, amount } = req.body
 
+        validateRequiredFieldsExistence(req)
         validateCurrency(from)
         validateCurrency(to)
         validateAmount(amount)
@@ -16,6 +17,15 @@ export function validateRequiredFields(req: Request, res: Response, next: NextFu
 
     catch (error: any) {
         return exceptionHandler(error, res)
+    }
+}
+
+function validateRequiredFieldsExistence(request: Request) {
+    const requiredFields = ["from", "to", "amount"]
+
+    for (const field of requiredFields) {
+        if (request.body.hasOwnProperty(field)) continue
+        throw new IllegalArgumentException(`Missing required field: ${field}`)    
     }
 }
 
