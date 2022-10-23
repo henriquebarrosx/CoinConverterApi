@@ -1,7 +1,7 @@
-import { AxiosRequestConfig } from "axios"
-
 export interface HttpClientGateway {
-    get<T>(route: string, config?: AxiosRequestConfig<any>): Promise<T>
+    get<T>(route: string, config?: HttpClientConfig): Promise<T>
 }
 
-export type HttpClientConfig = AxiosRequestConfig<any>
+export type HttpClientConfig = {
+    headers?: Record<string, string>
+}
