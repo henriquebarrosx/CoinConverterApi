@@ -1,0 +1,7 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "moduleNameMapper": {
+    "@exceptions/(.*)": "<rootDir>/src/exception/$1"
+  }
+}
