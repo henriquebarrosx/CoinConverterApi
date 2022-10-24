@@ -54,7 +54,14 @@ export class Transaction {
     }
 
     setUtcDatetime(value: string): void {
-        this.transaction.createdAt = value
+        const isValid = Number.isInteger(new Date(value).getTime())
+
+        if (isValid) {
+            this.transaction.createdAt = value
+            return
+        }
+
+        throw new Error("Invalid provided utc datetime")
     }
 
     toJSON() {
