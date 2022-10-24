@@ -10,8 +10,8 @@ export function exceptionHandler(error: any, response: Response) {
         })
     }
 
-    if (error?.response.status === EXCEEDED_RATE_LIMIT) {
-        return response.status(error?.code).json({
+    if (error?.response?.status === EXCEEDED_RATE_LIMIT) {
+        return response.status(429).json({
             message: error?.message
         })
     }
