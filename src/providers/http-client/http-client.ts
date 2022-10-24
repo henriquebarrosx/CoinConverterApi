@@ -8,7 +8,7 @@ export class HttpClient implements HttpClientGateway {
         this.httpClient = axios
     }
 
-    async get<T>(route: string, config: HttpClientConfig): Promise<T> {
+    async get<T>(route: string, config?: HttpClientConfig): Promise<T> {
         const { data } = await this.httpClient.get<T>(route, config)
         return data
     }
