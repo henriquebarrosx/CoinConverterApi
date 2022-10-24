@@ -2,6 +2,9 @@
   "preset": "ts-jest",
   "testEnvironment": "node",
   "moduleNameMapper": {
-    "@exceptions/(.*)": "<rootDir>/src/exception/$1"
+    "@exceptions/(.*)": "<rootDir>/src/exception/$1",
+    "@entities/(.*)": "<rootDir>/src/v1/entities/$1",
+    "@providers/(.*)": "<rootDir>/src/providers/$1",
+    "@@repositories/(.*)": "<rootDir>/src/v1/@repositories/$1"
   }
 }

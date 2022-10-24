@@ -50,6 +50,6 @@ describe("exceptionHandler", () => {
         exceptionHandler(error, res as Response)
         
         expect(res.status).toHaveBeenCalledWith(500)
-        expect(res.json).toHaveBeenCalledWith({ message: "Internal server error" })
+        expect(res.json).toHaveBeenCalledWith({ message: "Internal Server Error" })
     })
 })
