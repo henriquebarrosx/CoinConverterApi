@@ -26,7 +26,7 @@ export class CreateTransactionUseCase {
             to: to,
             result: res.result,
             conversionTax: transaction.getConversionTax(),
-            datetime: transaction.getUtcDatetime(),
+            createdAt: transaction.getUtcDatetime(),
         }
     }
 }

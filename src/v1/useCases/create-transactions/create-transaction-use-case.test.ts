@@ -41,7 +41,7 @@ describe("CreateTransactionUseCase", () => {
                     conversionTax: 0.43,
                     id: undefined,
                     userId: undefined,
-                    datetime: undefined,
+                    createdAt: undefined,
                 }
             })
     })
@@ -57,7 +57,7 @@ describe("CreateTransactionUseCase", () => {
             to: "USD",
             result: 12,
             conversionTax: 0.43,
-            datetime: undefined,
+            createdAt: undefined,
         })
      })
 })

@@ -44,7 +44,7 @@ describe("CreateTransactionController", () => {
             from: "BRL",
             to: "USD",
             result: 12,
-            datetime: undefined,
+            createdAt: undefined,
         })
     })
 

@@ -1,6 +1,6 @@
 import { Currency } from "@common-types/currency"
 
-type Input = {
+export type TransactionSchema = {
     id?: string
     userId?: string
     from: string
@@ -11,9 +11,9 @@ type Input = {
 }
 
 export class Transaction {
-    private transaction: Input
+    private transaction: TransactionSchema
 
-    constructor(input: Input) {
+    constructor(input: TransactionSchema) {
         this.transaction = input
     }
 
@@ -69,7 +69,7 @@ export class Transaction {
             userId: this.transaction.userId,
             ...this.transaction,
             id: this.transaction.id,
-            datetime: this.transaction.createdAt
+            createdAt: this.transaction.createdAt
         }
     }
 }

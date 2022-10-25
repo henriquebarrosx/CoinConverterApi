@@ -1,3 +1,3 @@
-import { Transaction } from "@entities/transaction"
+import { TransactionSchema } from "@entities/transaction"
 
-export type ListTransactionsOutDto = Transaction[]
+export type ListTransactionsOutDto = TransactionSchema[]

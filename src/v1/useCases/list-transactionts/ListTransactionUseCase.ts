@@ -6,6 +6,6 @@ export class ListTransactionsUseCase {
 
     async execute(): Promise<ListTransactionsOutDto> {
         const transactions = await this.transactionRepository.findAll()
-        return transactions
+        return transactions.map((transaction) => transaction.toJSON())
     }
 }

@@ -10,7 +10,7 @@ export type CreateTransactionOutDto = {
     userId: string
     id: string
     conversionTax: number
-    datetime: string
+    createdAt: string
     from: string
     to: string
     amount: number
