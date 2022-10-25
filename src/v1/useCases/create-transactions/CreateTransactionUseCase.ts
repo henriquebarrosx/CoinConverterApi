@@ -1,3 +1,4 @@
+import Log from "@providers/logger"
 import { Transaction } from "@entities/transaction"
 import { HttpClientGateway } from "@providers/http-client/http-client-gateway"
 import { TransactionRepositoryGateway } from "@repositories/transaction-repository-gateway"
@@ -17,6 +18,11 @@ export class CreateTransactionUseCase {
 
         const transaction = new Transaction({ from, to, amount, conversionTax: res.info.quote })
         await this.transactionRepository.save(transaction)
+
+        Log.info({
+            message: `Transaction ${transaction.getId()} created`,
+            timestamp: new Date().toISOString()
+        })
 
         return {
             id: transaction.getId(),

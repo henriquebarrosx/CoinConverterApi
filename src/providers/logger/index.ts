@@ -1,10 +1,16 @@
 import Pino, { DestinationStream, Logger, LoggerOptions } from "pino"
 
-export class Log {
-    private log: Logger<LoggerOptions | DestinationStream>
+class Log {
+    public log: Logger<LoggerOptions | DestinationStream>
 
     constructor() {
-        this.log = Pino()
+        this.log = Pino({
+            level: "info",
+            prettyPrint: {
+                colorize: true,
+                levelFirst: true,
+            },
+        })
     }
 
     info(payload: any): void {
@@ -15,3 +21,5 @@ export class Log {
         this.log.error(payload)
     }
 }
+
+export default new Log()

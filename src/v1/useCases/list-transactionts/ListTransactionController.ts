@@ -1,5 +1,6 @@
 import { Request, Response } from "express"
 
+import Log from "@providers/logger"
 import { exceptionHandler } from "@exceptions/exception-handler"
 import { ListTransactionsUseCase } from "./ListTransactionUseCase"
 
@@ -12,7 +13,12 @@ export class ListTransactionsController {
             return response.status(200).json(transactions)
         }
 
-        catch (error: unknown) {
+        catch (error: any) {
+            Log.info({
+                message: error?.message || "Unexpected error",
+                timestamp: new Date().toISOString()
+            })
+
             return exceptionHandler(error, response)
         }
     }
