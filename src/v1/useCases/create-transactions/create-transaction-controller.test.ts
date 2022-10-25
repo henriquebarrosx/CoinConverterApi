@@ -1,11 +1,11 @@
 import { Request, Response } from "express"
 
-import { prismaClient } from "../../../providers/database"
+import { prismaClient } from "@providers/database"
+import { HttpClient } from "@providers/http-client/http-client"
 import { transactionBuilder } from "../builders/transaction-builder"
 import { CreateTransactionUseCase } from "./CreateTransactionUseCase"
-import { HttpClient } from "../../../providers/http-client/http-client"
 import { CreateTransactionController } from "./CreateTransactionController"
-import { TransactionRepository } from "../../repositories/transaction-repository"
+import { TransactionRepository } from "@repositories/transaction-repository"
 
 describe("CreateTransactionController", () => {
     const httpClient = new HttpClient()

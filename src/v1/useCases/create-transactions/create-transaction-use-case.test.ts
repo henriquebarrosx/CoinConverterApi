@@ -1,9 +1,8 @@
+import { prismaClient } from "@providers/database"
+import { HttpClient } from "@providers/http-client/http-client"
 import { transactionBuilder } from "../builders/transaction-builder"
 import { CreateTransactionUseCase } from "./CreateTransactionUseCase"
-import { TransactionRepositoryGateway } from "@repositories/transaction-repository-gateway"
-import { HttpClient } from "../../../providers/http-client/http-client"
-import { TransactionRepository } from "../../repositories/transaction-repository"
-import { prismaClient } from "../../../providers/database"
+import { TransactionRepository } from "@repositories/transaction-repository"
 
 describe("CreateTransactionUseCase", () => {
     const httpClient = new HttpClient()

@@ -1,10 +1,10 @@
 import { Request, Response } from "express"
 
-import { prismaClient } from "../../../providers/database"
+import { prismaClient } from "@providers/database"
 import { ListTransactionsUseCase } from "./ListTransactionUseCase"
 import { transactionBuilder } from "../builders/transaction-builder"
 import { ListTransactionsController } from "./ListTransactionController"
-import { TransactionRepository } from "../../repositories/transaction-repository"
+import { TransactionRepository } from "@repositories/transaction-repository"
 
 describe("CreateTransactionController", () => {
     const mockedJson = jest.fn().mockImplementation(() => null)
