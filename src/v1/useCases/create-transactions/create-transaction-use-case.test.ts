@@ -1,4 +1,4 @@
-import { transactionBuilder } from "./builders/transaction-builder"
+import { transactionBuilder } from "../builders/transaction-builder"
 import { CreateTransactionUseCase } from "./CreateTransactionUseCase"
 import { TransactionRepositoryGateway } from "@repositories/transaction-repository-gateway"
 import { HttpClient } from "../../../providers/http-client/http-client"

@@ -1,7 +1,7 @@
 import { prismaClient } from "../../../providers/database"
 import { ListTransactionsUseCase } from "./ListTransactionUseCase"
 import { TransactionRepository } from "../../repositories/transaction-repository"
-import { transactionBuilder } from "../create-transactions/builders/transaction-builder"
+import { transactionBuilder } from "../builders/transaction-builder"
 
 describe("ListTransactionsUseCase", () => {
     const repository = new TransactionRepository(prismaClient)

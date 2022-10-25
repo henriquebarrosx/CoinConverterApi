@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
 
 import { prismaClient } from "../../../providers/database"
-import { transactionBuilder } from "./builders/transaction-builder"
+import { transactionBuilder } from "../builders/transaction-builder"
 import { CreateTransactionUseCase } from "./CreateTransactionUseCase"
 import { HttpClient } from "../../../providers/http-client/http-client"
 import { CreateTransactionController } from "./CreateTransactionController"
@@ -35,7 +35,7 @@ describe("CreateTransactionController", () => {
 
         await transactionController.handler(request, response as Response)
 
-        expect(response.status).toHaveBeenCalledWith(200)
+        expect(response.status).toHaveBeenCalledWith(201)
         expect(response.json).toHaveBeenCalledWith({
             id: undefined,
             userId: undefined,

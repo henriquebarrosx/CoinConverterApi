@@ -10,7 +10,7 @@ export class CreateTransactionController {
         try {
             const { from, to, amount } = request.body
             const transactionOutDto = await this.createTransactionUseCase.execute({ from, to, amount })
-            return response.status(200).json(transactionOutDto)
+            return response.status(201).json(transactionOutDto)
         }
 
         catch (error: unknown) {
