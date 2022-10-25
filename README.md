@@ -24,6 +24,7 @@
 1. Setup a postgres database url in `.env` file `DATABASE_URL`, exemple:
 
 ```bash
+API_KEY=123456990120310912031            # Visit https://apilayer.com and put your API key here
 DATABASE_URL="postgresql://<DATABASE_USER>:<DATABASE_PASS>@localhost:5432/currency_converter_db"
 ```
 
@@ -42,6 +43,9 @@ npm run prisma:generate
 npm run start
 ```
 
+<br>
+
+[Try to use the currency conversion doc](http://localhosts:3333/api-docs/)
 
 <br>
 
