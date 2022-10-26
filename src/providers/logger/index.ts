@@ -1,24 +1,33 @@
-import Pino, { DestinationStream, Logger, LoggerOptions } from "pino"
+import Winston, { format, transports } from "winston"
 
 class Log {
-    public log: Logger<LoggerOptions | DestinationStream>
+   private logger
 
-    constructor() {
-        this.log = Pino({
-            level: "info",
-            prettyPrint: {
-                colorize: true,
-                levelFirst: true,
-            },
-        })
-    }
+   constructor() {
+      const { combine, timestamp, label, printf } = format
+
+      const customFormat = printf(({ level, message, label, timestamp }) => {
+         return `${timestamp} [${label}] ${level}: ${message}`
+      })
+
+      this.logger = Winston.createLogger({
+         format: combine(
+            label({ label: 'LOG' }),
+            timestamp(),
+            customFormat
+          ),
+         transports: [
+            new transports.Console()
+         ]
+      })
+   }
 
     info(payload: any): void {
-        this.log.info(payload)
+       this.logger.info(payload)
     }
 
     error(payload: any): void {
-        this.log.error(payload)
+      this.logger.error(payload)
     }
 }
 
