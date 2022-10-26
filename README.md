@@ -25,19 +25,12 @@
 
 ```bash
 API_KEY=123456990120310912031            # Visit https://apilayer.com and put your API key here
-DATABASE_URL="postgresql://<DATABASE_USER>:<DATABASE_PASS>@localhost:5432/currency_converter_db"
+DATABASE_URL="mongodb+srv://<USER>:<PASSWORD>@<HOST>/currencyconverterdb"
 ```
 
-**OBS: If you don't have Postgres in your machine but have docker compose, just run `docker-compose up` to instantiate a postgres image**
+**OBS: Prisma setup use provider as mongodb. So, should be provided a valid mongodb database URL**
 
-2. Run Prisma migrations and Prisma Client setup
-
-```bash
-npm run prisma:migrate
-npm run prisma:generate
-```
-
-3. Run the project
+2. Run the project
 
 ```bash
 npm run start
