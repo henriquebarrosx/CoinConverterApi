@@ -28,17 +28,11 @@ API_KEY=123456990120310912031            # Visit https://apilayer.com and put yo
 DATABASE_URL="mongodb+srv://<USER>:<PASSWORD>@<HOST>/currencyconverterdb"
 ```
 
-**OBS: Prisma setup use provider as mongodb. So, should be provided a valid mongodb database URL**
+**OBS: Prisma setup use mongodb provider. So, should be defined a valid mongodb database URL**
 
-2. Run the project
+2. Run the project: `npm run dev`
 
-```bash
-npm run dev
-```
-
-<br>
-
-[Try to use the currency conversion doc](http://localhosts:3333/api-docs/)
+3. [Try to use the currency conversion doc](http://localhosts:3333/api-docs/)
 
 <br>
 
@@ -67,6 +61,21 @@ npm run dev
 
 <br>
 
+## ✔️ Desired items
+
+[✔️] -  Logs
+[✔️] -  Exception handler
+[✔️] -  Documentation
+[✔️] -  Clear commits message
+[✔️] -  Lint config
+[✔️] -  Unit test
+[✔️] -  Integration test
+[✔️] -  Endpoints documentation
+[❌] -  Deploy
+[❌] -  CI/CD
+
+<br>
+
 ## 📦 Folder structure
 
 ```
@@ -78,6 +87,7 @@ npm run dev
  ┃ ┣ 📂 providers
  ┃ ┃ ┃ ┣ 📂 database
  ┃ ┃ ┃ ┣ 📂 http-client
+ ┃ ┃ ┃ ┣ 📂 logger
  ┃ ┣ 📂 v1
  ┃ ┃ ┣ 📂 entities
  ┃ ┃ ┣ 📂 middlewares
@@ -88,7 +98,6 @@ npm run dev
  ┃ ┣ 📜 routes
  ┃ ┣ 📜 index.ts
  ┣ 📜 .gitignore
- ┣ 📜 docker-compose.yml
  ┣ 📜 README.md
  ┣ 📜 LICENSE
  ┣ 📜 package-lock.json
