@@ -33,7 +33,7 @@ DATABASE_URL="mongodb+srv://<USER>:<PASSWORD>@<HOST>/currencyconverterdb"
 2. Run the project
 
 ```bash
-npm run start
+npm run dev
 ```
 
 <br>

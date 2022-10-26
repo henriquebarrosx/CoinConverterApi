@@ -23,6 +23,9 @@
         "@exceptions/*": [ "src/exception/*" ],
         "@middlewares/*": [ "src/v1/middleware/*" ],
       }
-    }
+    },
+    "include": [
+      "src/**/*"
+    ]
   }
   
