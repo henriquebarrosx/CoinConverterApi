@@ -24,7 +24,7 @@ describe("CreateTransactionUseCase", () => {
         expect(httpClient.get)
             .toHaveBeenCalledWith(
                 `https://api.apilayer.com/currency_data/convert?from=BRL&to=USD&amount=5`,
-                { headers: { 'apikey': undefined }}
+                { headers: { 'apikey': process.env.API_KEY }}
             )
     })
 
